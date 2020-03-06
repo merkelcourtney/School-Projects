@@ -2,7 +2,7 @@
 ## The project description:
 Create a single-column, fixed-width web page featuring a recipe of your choice. You must find a recipe that allows you to complete the requirements of the assignment, plus find three or more supporting photos.
 
-### What I demonstrated:
+## What I demonstrated:
 - Construction of a simple web standard web page by combining essential HTML and CSS
 - Content hierarchy and block level elements (normal stacking behavior)
 - Writing clean, professional code -- including commenting and indentation
