@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+		I360 Web Design
+		Final Project: FAQ
+		Courtney Merkel
+		cpmerkel
+		Fall 2019
+	-->
+
+<head>
+    <meta charset="utf-8">
+    <title>FAQ</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,600i,700,700i,900,900i%7CWork+Sans:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/ea91289637.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon (made by Courtney Merkel) -->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
+    <!--[if lte IE 9]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+</head>
+
+<body id="page4body">
+    <!-- Navigation -->
+    <!-- nav bar code from: https://www.taniarascia.com/responsive-dropdown-navigation-bar/ -->
+    <section class="navigation">
+        <h2 class="sr-only">Navigation</h2>
+        <div class="nav-container">
+            <div class="brand">
+                <a href="index.html"><img src="images/courtney-logo.png" alt="Courtney Cooks A Lot logo"></a>
+            </div>
+            <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#">DINNER <i class="fas fa-arrow-circle-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="recipes/porktenderloin.html">PORK TENDERLOIN <br> W/ PAN SAUCE</a>
+                            </li>
+                            <li>
+                                <a href="recipes/coqauriesling.html">COQ AU RIESLING</a>
+                            </li>
+                            <li>
+                                <a href="recipes/meatballs.html">SWEET ITALIAN MEATBALLS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">SIDES <i class="fas fa-arrow-circle-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="recipes/crispypotatoes.html">CRISPY FRIED POTATOES</a>
+                            </li>
+                            <li>
+                                <a href="recipes/cilantrolimerice.html">CILANTRO LIME RICE</a>
+                            </li>
+                            <li>
+                                <a href="recipes/mushroomrisotto.html">MUSHROOM RISOTTO</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">DESSERTS <i class="fas fa-arrow-circle-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="recipes/bananabread.html">BANANA BREAD</a>
+                            </li>
+                            <li>
+                                <a href="recipes/cookies.html">CHOCOLATE CHUNK OATMEAL<br>TOFFEE COOKIES</a>
+                            </li>
+                            <li>
+                                <a href="recipes/fudge.html">PEANUT BUTTER FUDGE</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">FAQ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <!-- slideshow/carousel code from: https://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+         and https://stackoverflow.com/questions/11552380/how-to-automatically-crop-and-center-an-image -->
+    <header>
+        <div id="slideshow2">
+            <div class="center-cropped" style="background-image: url('images/salt.jpg'); background-size: 900px 900px;">
+                <!-- picture from https://unsplash.com/photos/kRIi3NH2U90 -->
+                <a href="#question2">
+                    <h2>should you salt pasta water?</h2>
+                </a>
+            </div>
+            <div class="center-cropped"
+                style="background-image: url('images/raw-chicken.jpg'); background-size: 1100px 1100px;">
+                <!-- picture from https://commons.wikimedia.org/wiki/File:Kycklingfil%C3%A9.jpg -->
+                <a href="#question3">
+                    <h2>do I wash chicken before cooking?</h2>
+                </a>
+            </div>
+            <div class="center-cropped" style="background-image: url('images/pans.jpg'); background-size: 900px 900px;">
+                <!-- picture from https://unsplash.com/photos/PkkLkjJdUZw -->
+                <a href="#question1">
+                    <h2>what utensils do I use in nonstick pans?</h2>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="about-recipes">
+            <h2 class="sr-only">What is deglazing?</h2>
+            <img style="width:300px" src="images/icons-08.png" alt="pan">
+            <div class="paragraph">
+                <p class="header">What is deglazing?</p>
+                <p>A fancy word for getting the flavor off the bottom of the pot or pan you just seared something in.
+                    Once you're done searing the meat, if you pour something like broth or wine into the pan and begin
+                    to scrape, the flavor begins to impart itself into the liquid, multiplying the flavor.
+                </p>
+            </div>
+        </section>
+        <section class="about-me">
+            <h2 class="sr-only">How do I know my meat isn't going to make me sick?</h2>
+            <div class="paragraph">
+                <p class="header">How do I know my meat isn't going to make me sick?</p>
+                <p>Get a meat thermometer! Make sure to stick it into the thickest part of the meat and make sure it
+                    reaches the FDA-approved temperature for the meat you are cooking. Chicken needs to be 165º
+                    internally, pork needs to be at least 145º internally and steak can range anywhere from 125º and up.
+                    Cook your ground beef til there's no pink remaining, though. That is, unless you're making burgers,
+                    in which case I would try 160º.
+                </p>
+            </div>
+            <img style="width:300px" src="images/icons-07.png" alt="cooked chicken">
+        </section>
+        <section class="about-recipes">
+            <h2 class="sr-only">When should I use butter or oil in a pan?</h2>
+            <img style="width:300px" src="images/icons-06.png" alt="butter">
+            <div class="paragraph">
+                <p class="header">When to use butter versus oil?</p>
+                <p>Butter is great for melting and cooking in (like a meat or veggie) when you aren't using it over high
+                    heat for a long amount of time. Butter can be burned fairly easy, so it's not a great idea to put it
+                    in a ripping hot oven. For cooking over high heat or in a super hot oven, I recommend using a
+                    neutral oil like canola, vegetable or grapeseed which have higher smoke points (which means it takes
+                    a higher temp to burn them). Olive oil tends to be a happy medium when in doubt!
+                </p>
+            </div>
+        </section>
+        <section class="about-me" id="question1">
+            <h2 class="sr-only">What utensils do I use in a nonstick pan?</h2>
+            <div class="paragraph">
+                <p class="header">What utensils do I use in a nonstick pan?</p>
+                <p>Never ever EVER use something metal or abrasive! Wooden or plastic utensils are safe and won't
+                    scratch off the coating, which could put the nasty chemicals in your food.
+                </p>
+            </div>
+            <img style="width:300px" src="images/icons-05.png" alt="cooking utensils">
+        </section>
+        <section class="about-recipes">
+            <h2 class="sr-only">If a recipes calls for wine, how do I choose which one?</h2>
+            <img style="width:300px" src="images/icons-04.png" alt="wine bottle and wine glass">
+            <div class="paragraph">
+                <p class="header">If a recipe calls for wine, how do I choose which one?</p>
+                <p>Recipes will typically tell you what category (like red or white), or may even be specific with a
+                    type (like Cabernet Sauvignon or Pinot Grigio). It's best to use what they specifically call for if
+                    it is noted. However, if it is vague like "white wine", use something that you would feel
+                    comfortable drinking (cheapest wine equals cheapest tasting food) and make sure that it matches the
+                    flavor profile of the dish. Cooking something savory? Be sure to get a dry wine, as to not add
+                    sweetness where it doesn't belong. Making something that benefits from sweet notes? Consider using
+                    semi-dry or a sweet wine – just keep in mind that as the liquid condenses, the sweeter the flavor.
+                    In my opinion, it's always best to choose the drier side when you don't know what to pick.
+                </p>
+            </div>
+        </section>
+        <section class="about-me" id="question2">
+            <h2 class="sr-only">Should you salt pasta water?</h2>
+            <div class="paragraph">
+                <p class="header">Should you salt pasta water?</p>
+                <p>Yes yes YES! It's a common saying... your pasta water should be salty like the sea. Bring your water
+                    to a boil first as putting salt in beforehand can marginally slow down how long it takes to boil
+                    (*~SCIENCE~*). Don't feel too bad putting 1/4 cup of salt in several quarts of water. It flavors
+                    your pasta as it cooks!
+                </p>
+            </div>
+            <img style="width:300px" src="images/icons-03.png" alt="different types of pasta">
+        </section>
+        <section class="about-recipes">
+            <h2 class="sr-only">I have no idea the best way to marinade... help!</h2>
+            <img style="width:300px" src="images/icons-02.png" alt="plastic bag">
+            <div class="paragraph">
+                <p class="header">I have no idea the best way to marinade... help!</p>
+                <p>Follow this rule of thumb: salt, fat, acid and some sweet. Make sure to put it in a container or bag
+                    that won't break or absorb the marinade as it will sit there for a while. Coat what you're
+                    marinating in a good amount of fat to coat (like olive oil), and put in half the amount of that fat
+                    in acid (like lemon juice or apple cider vinegar). Remember to add in your pepper or other dried
+                    spices, and just drizzle in a small amount of sweet (like brown sugar, honey or maple syrup). Salt
+                    can be added in the form of plain salt or more creative like soy sauce. You can always google ratios
+                    if you need help! Meats can marinade pretty safely for up to 2 days in the fridge, but about an hour
+                    is all you need! The flavor doesn't increase a ton after that first hour of marinating.
+                </p>
+            </div>
+        </section>
+        <section class="about-me" id="question3">
+            <h2 class="sr-only">Do I wash chicken before cooking!</h2>
+            <div class="paragraph">
+                <p class="header">Do I wash chicken before cooking?</p>
+                <p>NO! It's kind of an old thing that our grandparents and parents were taught, but if you're cooking
+                    your chicken to the correct internal temperature (165º), then that liquid that leaks off during
+                    cooking won't have any bacteria any more! In fact, rinsing it increases the chance that you're
+                    spreading salmonella all over your sink that could spread to other things later.
+                </p>
+            </div>
+            <img style="width:300px" src="images/icons-01.png" alt="raw chicken legs">
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="page4">
+        <a href="#"><i class="fas fa-envelope-square fa-2x"></i></a>
+        <a href="http://www.facebook.com/courtney.merkel.1/" target="_blank"><i
+                class="fab fa-facebook-square fa-2x"></i></a>
+        <a href="http://www.instagram.com/courtneypaige_8/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="http://www.twitter.com/courtneypaige_8/" target="_blank"><i
+                class="fab fa-twitter-square fa-2x"></i></a>
+        <a href="http://www.linkedin.com/in/merkelcourtney/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+    </footer>
+
+    <!-- external JavaScript -->
+    <!-- sourced from: https://www.taniarascia.com/responsive-dropdown-navigation-bar/ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/nav.js"></script>
+
+</body>
+
+</html>

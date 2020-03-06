@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<!--
+		I360 Web Design
+		Final Project: Recipe Portfolio
+		Courtney Merkel
+		cpmerkel
+		Fall 2019
+	-->
+
+<head>
+    <meta charset="utf-8">
+    <title>COURTNEY COOKS A LOT</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- sourced from: https://github.com/daneden/animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,600i,700,700i,900,900i%7CWork+Sans:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/ea91289637.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon (made by Courtney Merkel) -->
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+
+    <!--[if lte IE 9]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+</head>
+
+<body id="page1body">
+    <!-- Animation-->
+    <!-- https://github.com/daneden/animate.css -->
+    <img class="star animated rollIn" onclick="this.className='star animated flash'" src="images/icons-09.png"
+        alt="star" style="width:4%">
+    <!-- Navigation -->
+    <!-- nav bar code from: https://www.taniarascia.com/responsive-dropdown-navigation-bar/ -->
+    <section class="navigation">
+        <h2 class="sr-only">Navigation</h2>
+        <div class="nav-container">
+            <div class="brand">
+                <a href="index.html"><img src="images/courtney-logo.png"
+                        alt="Courtney Cooks A Lot logo"></a>
+            </div>
+            <nav>
+                <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                <ul class="nav-list">
+                    <li>
+                        <a href="#">DINNER <i class="fas fa-arrow-circle-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="recipes/porktenderloin.html">PORK TENDERLOIN <br> W/ PAN SAUCE</a>
+                            </li>
+                            <li>
+                                <a href="recipes/coqauriesling.html">COQ AU RIESLING</a>
+                            </li>
+                            <li>
+                                <a href="recipes/meatballs.html">SWEET ITALIAN MEATBALLS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">SIDES <i class="fas fa-arrow-circle-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="recipes/crispypotatoes.html">CRISPY POTATOES</a>
+                            </li>
+                            <li>
+                                <a href="recipes/cilantrolimerice.html">CILANTRO LIME RICE</a>
+                            </li>
+                            <li>
+                                <a href="recipes/mushroomrisotto.html">MUSHROOM RISOTTO</a>
+                            </li>
+                            <li>
+                                <a href="nokneadbread.html">NO-KNEAD CRUSTY BREAD</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">DESSERTS <i class="fas fa-arrow-circle-down"></i></a>
+                        <ul class="nav-dropdown">
+                            <li>
+                                <a href="recipes/bananabread.html">BANANA BREAD</a>
+                            </li>
+                            <li>
+                                <a href="recipes/cookies.html">CHOCOLATE CHUNK OATMEAL<br>TOFFEE COOKIES</a>
+                            </li>
+                            <li>
+                                <a href="recipes/fudge.html">PEANUT BUTTER FUDGE</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="faq.html">FAQ</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Header -->
+    <!-- slideshow/carousel code from: https://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+         and https://stackoverflow.com/questions/11552380/how-to-automatically-crop-and-center-an-image -->
+    <header>
+        <div id="slideshow">
+            <div class="center-cropped"
+                style="background-image: url('images/risotto.jpg'); background-size: 1200px 1200px;">
+                <a href="recipes/mushroomrisotto.html">
+                    <h2>love mushrooms?</h2>
+                </a>
+            </div>
+            <div class="center-cropped"
+                style="background-image: url('images/rice.jpg'); background-size: 1200px 1200px;">
+                <a href="recipes/cilantrolimerice.html">
+                    <h2>spice up taco night!</h2>
+                </a>
+            </div>
+            <div class="center-cropped"
+                style="background-image: url('images/pork.jpg'); background-size: 1200px 1200px;">
+                <a href="recipes/porktenderloin.html">
+                    <h2>most delicious pork</h2>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="about-recipes">
+            <h2 class="sr-only">About the recipes</h2>
+            <img src="images/stove-04.png" alt="stove drawing">
+            <div class="paragraph">
+                <p class="header">How in the world the recipes came about</p>
+                <p>Pictures of me cooking can be found at as early as 2 years old. Ever since then, I've become my
+                    mother's regular kitchen nuisance. I love to experiment with everything food-related – most of the
+                    time related to a Facebook recipe video a family member shared to my wall. While that is only
+                    partially a joke, I got tired of making recipes on Pinterest that never quite met my expectations,
+                    or measured up to the 5 star ratings they were given. So, that's how my recipe development began.
+                </p>
+                <p>I start with an idea of how something is generally made, then tweak aspects of it based on the vast
+                    cooking knowledge I can mostly attribute to the Internet. I aim to be simplistic, but produce the
+                    highest quality food an at-home cook can do. Every recipe is designed with that in mind! I hope
+                    these recipes serve you well; I sure think they are 5-star rated.
+                </p>
+            </div>
+        </section>
+        <section class="about-me">
+            <h2 class="sr-only">About Courtney</h2>
+            <div class="paragraph">
+                <p class="header">A little about the aspiring chef</p>
+                <p>I'm a junior at Indiana University, majoring in informatics (or the business of messing around on the
+                    computer). While I have no formal cooking training other than a Sur La Table class years ago, a
+                    lifelong love of the Food Network (and lots and lots of practice) has helped me to become the
+                    amateur chef I am today. </p>
+                <p>I aspire to be a web designer, focusing on all things design &
+                    aesthetics-related. In my free time, you can find me at the grocery store, watching IU basketball,
+                    or jamming out to Mumford & Sons or Sigrid in my car. Keep up with me on my socials below!</p>
+            </div>
+            <img src="images/me.png" alt="a portrait of Courtney">
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#"><i
+                class="fas fa-envelope-square fa-2x"></i></a>
+        <a href="http://www.facebook.com/courtney.merkel.1/" target="_blank"><i
+                class="fab fa-facebook-square fa-2x"></i></a>
+        <a href="http://www.instagram.com/courtneypaige_8/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="http://www.twitter.com/courtneypaige_8/" target="_blank"><i
+                class="fab fa-twitter-square fa-2x"></i></a>
+        <a href="http://www.linkedin.com/in/merkelcourtney/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+    </footer>
+
+    <!-- external JavaScript -->
+    <!-- sourced from: https://www.taniarascia.com/responsive-dropdown-navigation-bar/ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="js/nav.js"></script>
+</body>
+
+</html>

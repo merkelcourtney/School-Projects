@@ -1,0 +1,923 @@
+/* COLORS:
+Main Color Pink: #FF8AB3
+Bright Red: #FF4524
+Seafoam Green: #8DD9A7
+Dark Green: rgb(36, 111, 50)
+Purple: #976EFF
+Tan: #EBE6C5
+Yellow: rgb(243, 161, 17)
+*/
+
+/* PHOTOS by Courtney Merkel unless otherwise noted:
+peanut butter fudge: https://commons.wikimedia.org/wiki/File:Fudge_squares_with_crumbling_edges.jpg
+banana bread: https://commons.wikimedia.org/wiki/Category:Banana_bread#/media/File:Banana_bread_loaves_from_above,_February_2010.jpg
+crispy potatoes: https://commons.wikimedia.org/wiki/File:Wild_Goat_Bistro_-_April_2019_-_Stierch_03.jpg
+meatballs: https://unsplash.com/photos/AUAuEgUxg5Q
+pans: https://unsplash.com/photos/PkkLkjJdUZw
+salt: https://unsplash.com/photos/kRIi3NH2U90
+raw-chicken: https://commons.wikimedia.org/wiki/File:Kycklingfil%C3%A9.jpg
+*/
+
+:root {
+  --main-color: #FF8AB3;
+  --green: #8DD9A7;
+  --purple: #976EFF;
+  --red: #FF4524;
+  --tan: #EBE6C5;
+  --dark-green: rgb(36, 111, 50);
+  --yellow: rgb(243, 161, 17);
+}
+
+body#page1body {
+  background: var(--main-color) url('../images/red-dot.png') repeat fixed top left;
+  background-size: 82px 82px;
+  margin: 0 auto;
+}
+
+body#page2body {
+  background: var(--tan) url('../images/green-long-dots.png') repeat fixed top left;
+  background-size: 82px 82px;
+  margin: 0 auto;
+}
+
+body#page3body {
+  background: var(--purple) url('../images/yellow-arrows.png') repeat fixed top left;
+  background-size: 82px 82px;
+  margin: 0 auto;
+}
+
+body#page4body {
+  background: var(--yellow) url('../images/diamonds.png') repeat fixed top left;
+  background-size: 100px 100px;
+  margin: 0 auto;
+}
+
+.star {
+  position: fixed;
+  top: 25%;
+  left: 10%;
+  z-index: 999;
+}
+
+/* Browser Upgrade Prompt */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* hides an element, but not from screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* no break */
+.nobr {
+  white-space: nowrap;
+}
+
+/* 
+  TYPOGRAPHY
+*/
+
+p {
+  font-family: 'Vollkorn', serif;
+}
+
+h2 {
+  font-family: 'Work Sans', sans-serif;
+}
+
+/*
+  NAVIGATION
+  source: https://www.taniarascia.com/responsive-dropdown-navigation-bar/
+  modified by Courtney Merkel  
+*/
+
+nav {
+  position: absolute;
+  right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul li a {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  display: block;
+  padding: 20px;
+  margin: 0 10px;
+  font-size: 20px;
+  background: black;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background: var(--green);
+  color: white;
+}
+
+nav ul li a:not(:only-child):after {
+  padding-left: 0;
+  content: "";
+}
+
+nav ul li ul li {
+  min-width: 190px;
+}
+
+nav ul li ul li a {
+  padding: 15px;
+  line-height: 20px;
+  z-index: 1;
+}
+
+.nav-dropdown {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  line-height: 200px;
+}
+
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: black;
+  height: 70px;
+  width: 70px;
+}
+
+#nav-toggle {
+  position: absolute;
+  left: 18px;
+  top: 22px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
+}
+
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 5px;
+  width: 35px;
+  background: white;
+  position: absolute;
+  display: block;
+  content: "";
+  transition: all 300ms ease-in-out;
+}
+
+#nav-toggle span:before {
+  top: -10px;
+}
+
+#nav-toggle span:after {
+  bottom: -10px;
+}
+
+#nav-toggle.active span {
+  background-color: transparent;
+}
+
+#nav-toggle.active span:before, #nav-toggle.active span:after {
+  top: 0;
+}
+
+#nav-toggle.active span:before {
+  transform: rotate(45deg);
+}
+
+#nav-toggle.active span:after {
+  transform: rotate(-45deg);
+}
+
+.navigation {
+  height: 70px;
+  background: transparent;
+  z-index: 998;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 30px 20px;;
+}
+
+.brand {
+  position: absolute;
+  padding-left: 5px;
+  float: left;
+}
+
+.brand img {
+  width: 300px;
+}
+
+.brand a,
+.brand a:visited {
+  text-decoration: none;
+}
+
+/*
+  HEADER
+  source: https://css-tricks.com/snippets/jquery/simple-auto-playing-slideshow/
+  and: https://stackoverflow.com/questions/11552380/how-to-automatically-crop-and-center-an-image
+*/
+
+header {
+  z-index: 1;
+  margin-top: 50px;
+}
+
+#slideshow > div { 
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  right: 10px; 
+  bottom: 10px; 
+  border: 15px solid var(--purple);
+}
+
+#slideshow { 
+  margin: 50px auto; 
+  position: relative; 
+  width: 70%;
+  height: 240px;
+  padding: 10px; 
+}
+
+#slideshow2 {
+  margin: 50px auto; 
+  position: relative; 
+  width: 70%;
+  height: 240px;
+  padding: 10px; 
+}
+
+#slideshow2 > div { 
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  right: 10px; 
+  bottom: 10px; 
+  border: 15px solid var(--tan);
+}
+
+.center-cropped {
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#slideshow a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 5px 20px;
+  word-wrap: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 60%;
+  text-align: center;
+}
+
+#slideshow2 a {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  padding: 5px 20px;
+  word-wrap: normal;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 60%;
+  text-align: center;
+}
+
+
+/*
+  MAIN RECIPE
+*/
+
+.red {
+  width: 60%;
+}
+
+.red h1 {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 36px;
+  background-color: var(--red);
+  color: white;
+  padding: 15px;
+}
+
+.green {
+  width: 60%;
+}
+
+.green h1 {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 36px;
+  background-color: var(--dark-green);
+  color: white;
+  padding: 15px;
+}
+
+.green h4 {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  padding: 15px;
+  font-weight: 400;
+}
+
+.tan {
+  width: 60%;
+}
+
+.tan h1 {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 36px;
+  background-color: var(--tan);
+  color: var(--red);
+  padding: 15px;
+}
+
+.tan h4 {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  padding: 15px;
+  font-weight: 400;
+}
+
+.red h4 {
+  text-align: center;
+  font-family: 'Work Sans', sans-serif;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  padding: 15px;
+  font-weight: 400;
+}
+
+.header-recipe {
+  display: flex;
+  justify-content: center;
+}
+
+.header-recipe img {
+  border: 15px solid var(--red);
+  width: 85%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.stack {
+  display: block;
+}
+
+.header-recipe2 {
+  display: flex;
+  justify-content: center;
+}
+
+.header-recipe2 img {
+  border: 15px solid var(--dark-green);
+  width: 85%;
+}
+
+.header-recipe3 {
+  display: flex;
+  justify-content: center;
+}
+
+.header-recipe3 img {
+  border: 15px solid var(--tan);
+  width: 85%;
+}
+
+main {
+  min-height: 400px;
+  min-width: 400px;
+}
+
+.ingredients {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.ingredients ul {
+  list-style: none;
+  font-size: 16px;
+  font-family: 'Work Sans', sans-serif;
+  background-color: var(--green);
+  padding: 25px 25px 25px 60px;
+  line-height: 1.3em;
+}
+
+.directions {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.directions p {
+  margin: 0 auto;
+  font-size: 16px;
+}
+
+.recipe-red h4 {
+  background-color: var(--red);
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  padding: 25px;
+  font-size: 24px;
+}
+
+.recipe-tan h4 {
+  background-color: var(--tan);
+  color: var(--red);
+  font-family: 'Work Sans', sans-serif;
+  padding: 25px;
+  font-size: 24px;
+}
+
+.recipe-green h4 {
+  background-color: var(--dark-green);
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  padding: 25px;
+  font-size: 24px;
+}
+
+/*
+  MAIN HOME PAGE
+*/
+
+main p {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14px;
+  background-color: var(--green);
+  color: black;
+  padding: 25px;
+  line-height: 1.3em;
+}
+
+.header {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.paragraph {
+  width: 400px;
+  margin: 0 20px 0 20px;
+}
+
+.about-recipes {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-recipes img {
+  width: 300px;
+}
+
+.about-me {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me img {
+  width: 300px;
+}
+
+/*
+  FOOTER
+*/
+
+footer {
+  background-color: var(--purple);
+  margin: 30px 0 0 0;
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+footer#page2 {
+  background-color: var(--red);
+}
+
+footer#page3 {
+  background-color: var(--dark-green);
+}
+
+footer#page4 {
+  background-color: var(--tan);
+}
+
+footer a {
+  padding: 10px;
+  color: white;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+footer#page4 a {
+  padding: 10px;
+  color: var(--red);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+footer#page4 a:hover {
+  color: var(--green);
+}
+
+footer a:hover {
+  color: var(--green);
+}
+
+/*
+  MEDIA QUERIES
+  sourced from: https://www.taniarascia.com/responsive-dropdown-navigation-bar/ 
+*/
+
+@media only screen and (max-width: 360px) {
+  .nav-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: black;
+    height: 70px;
+    width: 70px;
+  }
+  nav {
+    width: 90%;
+    padding: 70px 0 15px;
+    z-index: 999;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 10px;
+    line-height: 25px;
+    margin: 0;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  .nav-dropdown {
+    position: static;
+  }
+  #slideshow a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 5px 20px;
+    word-wrap: normal;
+    font-size: 11px;
+    text-transform: uppercase;
+    width: 60%;
+    text-align: center;
+  }
+  #slideshow2 a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 5px 20px;
+    word-wrap: normal;
+    font-size: 11px;
+    text-transform: uppercase;
+    width: 60%;
+    text-align: center;
+  }
+  main p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+    background-color: var(--green);
+    color: black;
+    padding: 25px;
+    line-height: 1.3em;
+    max-width: 200px;
+  }
+  .header {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .brand img {
+    width: 180px;
+  }
+  .about-recipes img {
+    width: 180px;
+  }
+  .about-recipes {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  .about-me img {
+    width: 180px;
+  }
+  .about-me {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  main {
+    display: block;
+    align-content: center;
+    margin: auto 0;
+  }
+  .paragraph {
+    width: 250px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .nav-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: black;
+    height: 70px;
+    width: 70px;
+  }
+  nav {
+    width: 90%;
+    padding: 70px 0 15px;
+    z-index: 999;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 10px;
+    line-height: 25px;
+    margin: 0;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  .nav-dropdown {
+    position: static;
+  }
+  #slideshow a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 5px 20px;
+    word-wrap: normal;
+    font-size: 11px;
+    text-transform: uppercase;
+    width: 60%;
+    text-align: center;
+  }
+  #slideshow2 a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 5px 20px;
+    word-wrap: normal;
+    font-size: 11px;
+    text-transform: uppercase;
+    width: 60%;
+    text-align: center;
+  }
+  main p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 11px;
+    background-color: var(--green);
+    color: black;
+    padding: 25px;
+    line-height: 1.3em;
+    max-width: 200px;
+  }
+  .header {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .brand img {
+    width: 200px;
+  }
+  .about-recipes img {
+    width: 200px;
+  }
+  .about-recipes {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  .about-me img {
+    width: 200px;
+  }
+  .about-me {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  main {
+    display: block;
+    align-content: center;
+    margin: auto 0;
+  }
+  .paragraph {
+    width: 280px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .nav-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: black;
+    height: 70px;
+    width: 70px;
+  }
+  nav {
+    width: 90%;
+    padding: 70px 0 15px;
+    z-index: 999;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+    margin: 0;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  .nav-dropdown {
+    position: static;
+  }
+  #slideshow a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 5px 20px;
+    word-wrap: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 60%;
+    text-align: center;
+  }
+  #slideshow2 a {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    padding: 5px 20px;
+    word-wrap: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 60%;
+    text-align: center;
+  }
+  main p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 12px;
+    background-color: var(--green);
+    color: black;
+    padding: 25px;
+    line-height: 1.3em;
+    max-width: 200px;
+  }
+  .header {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .brand img {
+    width: 280px;
+  }
+  .about-recipes img {
+    width: 280px;
+  }
+  .about-recipes {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  .about-me img {
+    width: 280px;
+  }
+  .about-me {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+  }
+  main {
+    display: block;
+    align-content: center;
+    margin: auto 0;
+  }
+  .paragraph {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .nav-mobile {
+    display: block;
+  }
+  nav {
+    width: 90%;
+    padding: 70px 0 15px;
+    z-index: 999;
+  }
+  nav ul {
+    display: none;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 15px;
+    line-height: 20px;
+    margin: 0;
+  }
+  nav ul li ul li a {
+    padding-left: 30px;
+  }
+  .nav-dropdown {
+    position: static;
+  }
+}
+@media screen and (min-width: 950px) {
+  .nav-list {
+    display: block !important;
+  }
+}
+
+  
+  
