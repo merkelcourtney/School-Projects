@@ -1,0 +1,162 @@
+/* 
+  Courtney Merkel
+  Project 2
+  INFO-I 399
+  Web Design 2
+  Spring 2020
+*/
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+  General
+*/
+.container {
+  max-width: 1020px;
+  margin: 30px auto 150px;
+  padding: 15px;
+}
+
+/* 
+PART TWO
+Use Grid to create the three column layout
+  - if you want to try to make it more responsive, try this:
+  - https://css-tricks.com/intrinsically-responsive-css-grid-with-minmax-and-min/
+  - https://dev.to/evanminto/intrinsically-responsive-css-grid-with-minmax-and-min-1n55
+  - if you've not had I360, then just try to make three columns of the right proportions
+*/
+
+#interactive {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  margin-top: 40px;
+}
+
+#drugs {
+  grid-column: 1 / 2;
+  display: grid;
+  grid-template-columns: repeat(5, 110px);
+  grid-template-rows: repeat(4, 110px);
+}
+
+#progressbar {
+  grid-column-start: 2 / 3;
+}
+
+#message {
+  grid-column-start: 3 / 4;
+  padding-left: 10px;
+}
+
+/*
+  PART THREE
+  Update the CSS for the first column (drug images) to look like the example
+  - hover effect and label for each drug image
+  - an effect that remains when a drug is clicked (to show it's been selected)
+  - CSS transitions to help with the interface interactions
+ */
+
+/*
+  Typography
+*/
+
+h1, h2, p, figcaption {
+  font-family: 'Catamaran', sans-serif;
+  line-height: 1.3em;
+}
+
+.totalColor {
+  font-size: 36px;
+  line-height: 45px;
+}
+
+/*
+  Interactive
+*/
+
+/* drugs containing acetametaphin */
+#drugs {
+  max-height: 448px;
+  max-width: 870px;
+}
+
+figure { 
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+figcaption {
+  /* use CSS position property to adjust location */
+  position: absolute;
+  text-align: center;
+  width: 269%;
+  background-color: #eeeeee;
+  border: solid #999999 0.5px;
+  padding: 2px;
+  font-size: 13px;
+}
+
+img {
+  border-radius: 2px;
+  opacity: 0.5;
+  width: 80px;
+}
+ 
+figure img:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* PART FOUR - style for when drug selected */
+figure.selected img {
+  opacity: 1;
+}
+
+figure.selected figcaption {
+  display: none;
+}
+
+/* how close to lethal dose bar */
+/* because this is a component, use flexbox */
+
+#progressbar { 
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+} 
+
+.meter {
+  width: 16px;
+  height: 100%;
+  margin-left: 30px;
+  border: 1px solid lightslategray;
+  border-radius: 4px;
+  position: relative;
+}
+
+.meter > span {
+  background-color: darkred;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.label {
+  margin: 0;
+  width: 150px;
+  padding-left: 1.0em;
+  position: relative;
+  bottom: 0px;
+  left: 0;
+  font-weight: bold;
+}
