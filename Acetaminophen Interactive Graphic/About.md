@@ -14,4 +14,4 @@ The main goal is to successfully recreate a 2013 ProPublica interactive data gra
 ### 100/100
 
 ## Visit the website:
-http://cgi.sice.indiana.edu/~cpmerkel/interactive-graphic/
+http://pages.iu.edu/~cpmerkel/Finished%20Project%202/project-2.html
