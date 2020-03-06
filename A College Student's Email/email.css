@@ -1,0 +1,94 @@
+body {
+	background-color: #f4f4f4;
+}
+
+.container {
+	margin: 0;
+	bottom: 0;
+	padding: 0;
+	position: relative;
+	display: inline-block;
+}
+
+.main {
+	position: relative;
+	width: 100%;
+}
+
+.gif1 {
+  display: block;
+  position: absolute;
+  left: 36.09%;
+  top: 59.57%;
+  z-index: 79;
+}
+
+.gif2 {
+  display: block;
+  position: absolute;
+  left: 22.68%;
+  top: 35.29%;
+  z-index: 73;
+}
+
+.inbox3 {
+  display: block;
+  position: absolute;
+  left: 22.68%;
+  top: 41%;
+  z-index: 36;
+}
+
+.inbox5 {
+  display: block;
+  position: absolute;
+  left: 22.68%;
+  top: 52.43%;
+  z-index: 44;
+}
+
+.inbox1 {
+  display: block;
+  position: absolute;
+  left: 22.68%;
+  top: 29.57%;
+  z-index: 28;
+}
+
+.inbox4 {
+  display: block;
+  position: absolute;
+  left: 22.68%;
+  top: 46.71%;
+  z-index: 73;
+}
+
+.jobs {
+  display: block;
+  position: absolute;
+  left: 27.68%;
+  top: 46.71%;
+  z-index: 90;
+}
+
+.select {
+  display: block;
+  position: absolute;
+  left: 22.92%;
+  top: 15.67%;
+  z-index: 75;
+}
+
+.button {
+  display: block;
+  background-color: #d93026;
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-size: 1vw;
+  position: absolute;
+  left: 33%;
+  top: 16.7%;
+  z-index: 80;
+  width: 5.5%;
+  height: 3.5%;
+  }

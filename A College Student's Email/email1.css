@@ -1,0 +1,47 @@
+body {
+	background-color: black;
+}
+
+.box1 {
+	background-color: white;
+	position: fixed;
+	padding-right: 10px;
+	padding-left: 10px;
+	top: 50%;
+	left: 50%;
+}
+
+.box2 {
+	background-color: white;
+	position: fixed;
+	font-size: 8px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	top: 90%;
+	left: 90%;
+}
+
+.box2 a:link {
+	color:#8e8e8e;
+}
+
+.box2 a:visited {
+	color: black;
+}
+
+.box2 a:hover {
+	color: #2364b2;
+}
+
+video {
+	position:fixed;
+	right:0;
+	bottom:0;
+	min-width:100%;
+	min-height:100%;
+	width:auto;
+	height:auto;
+	z-index:-1;
+}

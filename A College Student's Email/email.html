@@ -1,0 +1,55 @@
+<html>
+	<head>
+		<title>A College Student's Email</title>
+		<link rel="shortcut icon" type="image/png" href="Images/email.png">
+		<link rel="stylesheet" type="text/css" href="email.css">
+		<script>
+			
+			function PlaySound(sound) {
+				var thissound=document.getElementById(sound);
+				thissound.play();
+			}
+			
+			function StopSound(sound) {
+				var thissound=document.getElementById(sound);
+    			thissound.pause();
+				thissound.currentTime = 0;
+			}
+			
+			function showChecks() {
+				var image = document.getElementById('image');
+				if (image.src.match("Images/select.png")) {
+				image.src = "Images/checkmark1.png";
+				} else {
+				image.src = "Images/select.png";
+				}
+			}
+			
+			window.onload=function() {
+				document.getElementById('delete').style.display='none';
+			}
+			
+			function showButton() {
+				document.getElementById('delete').style.display='block';
+			}
+			
+		</script>
+	</head>
+	<body>
+		<div class="container">
+		    <button class="button" id="delete" type="button" onClick="location.href='email1.html'">Delete</button>
+			<img class="main" src="Images/email.jpg" />
+			<img class="gif1" src="Images/number-counter.jpg" onMouseOver="this.src='Images/number-counter.gif'" width="1.43%" height="auto" />
+		    <img class="gif2" src="Images/study.jpg" onMouseOver="this.src='Images/study.gif'" onMouseOut="this.src='Images/study.jpg'" width="68.57%" height="auto" />
+		    <img class="inbox3" src="Images/inbox3orig.jpg" onMouseOver="this.src='Images/inbox3.jpg'" onMouseOut="this.src='Images/inbox3orig.jpg'" width="68.57%" height="auto" />
+		    <img class="inbox5" src="Images/inbox5orig.jpg" onMouseOver="this.src='Images/inbox5.jpg'" onMouseOut="this.src='Images/inbox5orig.jpg'" width="68.57%" height="auto" />
+			<img class="inbox1" src="Images/inbox1.jpg" onMouseOver="PlaySound('audio1')" onMouseOut="StopSound('audio1')" width="68.57%" height="auto" />
+			<img class="inbox4" src="Images/inbox4.jpg" width="68.57%" height="auto" />
+		    <img id="image" class="select" src="Images/select.png" onClick="showChecks();showButton();" width="2.68%" height="auto" />
+			<img class="jobs" src="Images/empty.png" onMouseOver="this.src='Images/jobs.jpg'" onMouseOut="this.src='Images/empty.png'" width="68.57%" height="auto" />	
+		</div>
+		<audio loop id="audio1">
+    		<source src="Audio/alarm.mp3" type="audio/mp3">
+    	</audio>
+	</body>
+</html>
