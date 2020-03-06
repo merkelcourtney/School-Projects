@@ -1,0 +1,92 @@
+/* Courtney Merkel */
+/* MY STYLES */
+
+/* THE BACKGROUND */
+
+body {
+    /* gradient backgrounds sourced from https://uigradients.com/#RainbowBlue */
+    background: #00F260;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+
+/* LARGE PAGE DIV for photo placing purposes */
+
+#full-page {
+    position: relative;
+}
+
+/* THE IMAGES */
+
+img {
+    width: 12%;
+}
+
+.photo1 {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    transform: rotate(180deg);
+}
+
+.photo2 {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+}
+
+/* THE BOX */
+
+.quote_container {
+    padding: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 300;
+    height: 425px;
+    width: 425px;
+    margin: 60px auto 60px;
+} 
+
+/* THE TEXT */
+
+.quote::before {
+    content: open-quote;
+    font-size: 300px;
+    font-family: 'Nunito', sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 135px;
+    left: 35%;
+}
+
+.quote {
+    padding-top: 20px;
+    text-align: center;
+    line-height: 2.5em;
+}
+
+.quote::after {
+    content: close-quote;
+    font-size: 300px;
+    font-family: 'Nunito', sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    top: 435px;
+    right: 32%;
+}
+
+.attribution {
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.design {
+    color: white;
+    font-family: 'Baloo Bhai', cursive;
+    font-size: 50px;
+}
